@@ -1,0 +1,165 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body styling */
+body {
+    background: #f4f7f6;
+    color: #333;
+    min-height: 100vh;
+}
+
+/* Header styling */
+.header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.header h2 {
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+/* Container for cards */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+/* Card styling */
+.card {
+    background: #fff;
+    padding: 25px 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    /* fixed width replaced with fluid/max rules */
+    width: 100%;
+    max-width: 500px;     /* card will never be wider than this */
+    min-width: 500px;     /* optional lower bound */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+    margin-bottom: 20px;
+    color: #2575fc;
+    text-align: center;
+}
+
+/* Inputs and select fields */
+.card input[type="text"],
+.card input[type="number"],
+.card select {
+    width: 100%;
+    padding: 10px 12px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.card input:focus,
+.card select:focus {
+    border-color: #2575fc;
+    box-shadow: 0 0 5px rgba(37, 117, 252, 0.4);
+}
+
+/* Buttons */
+.card button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: #2575fc;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card button:hover {
+    background: #6a11cb;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table thead {
+    background: #2575fc;
+    color: #fff;
+}
+
+table th, table td {
+    padding: 12px 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+table tr:hover {
+    background: #f1f1f1;
+}
+
+/* Action buttons in table */
+table button {
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+    margin: 2px;
+}
+
+table .edit-btn {
+    background: #ff9800;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+table .edit-btn:hover {
+    background: #e68900;
+}
+
+table .delete-btn {
+    background: #f44336;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+table .delete-btn:hover {
+    background: #d32f2f;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        max-width: none;   /* let it shrink on narrow viewports */
+    }
+}
